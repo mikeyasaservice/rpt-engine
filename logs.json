@@ -1,0 +1,12 @@
+[
+    {
+        "Image": "C:\\test\\bitsadmin.exe",
+        "CommandLine": "+R +H +A asd.cui",
+        "ParentImage": "C:\\test\\wmiprvse.exe"
+    },
+    {
+        "Image": "C:\\test\\another.exe",
+        "CommandLine": "-flag value",
+        "ParentImage": "C:\\test\\parent.exe"
+    }
+]

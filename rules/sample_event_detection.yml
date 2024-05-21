@@ -1,0 +1,22 @@
+title: Detect Sample Event
+id: sample-event-detection
+status: experimental
+description: Detects a specific test event.
+author: You
+date: 2024/05/20
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: "C:\\test\\bitsadmin.exe"
+    CommandLine: "+R +H +A asd.cui"
+    ParentImage: "C:\\test\\wmiprvse.exe"
+  condition: selection
+fields:
+  - Image
+  - CommandLine
+  - ParentImage
+falsepositives:
+  - Legitimate administrative activity
+level: high

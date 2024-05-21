@@ -1,0 +1,20 @@
+title: Sample Event Detection 2
+id: sample_event_detection_2
+status: experimental
+description: Detects another specific command line pattern
+author: Test Author
+date: 2024/05/20
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: 'C:\test\another.exe'
+    CommandLine: '-flag value'
+    ParentImage: 'C:\test\parent.exe'
+  condition: selection
+falsepositives:
+  - Legitimate admin activity
+level: medium
+tags:
+  - attack.execution
